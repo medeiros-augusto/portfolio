@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sim ou não?</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fd8181;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 10px;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #ff0000;
+    }
+    img{
+        width: 100%;
+    }
+
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 18px;
+        }
+
+        button {
+            font-size: 16px;
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>CUZINHO HOJE?</h1>
+    <button id="sim" onclick="onSimClick()">Sim</button>
+    <button id="nao" onclick="moveNao()">Não</button>
+
+    <div id="image-container">
+        <img src="https://w0.peakpx.com/wallpaper/860/738/HD-wallpaper-cachorrinho-d-coracao-cachorro-heart-puppy-dog-animal.jpg" alt="Imagem">
+    </div>
+
+    <script>
+        function moveNao() {
+            var naoButton = document.getElementById('nao');
+            naoButton.style.position = 'absolute';
+            naoButton.style.left = Math.random() * (window.innerWidth - naoButton.clientWidth) + 'px';
+            naoButton.style.top = Math.random() * (window.innerHeight - naoButton.clientHeight) + 'px';
+        }
+
+        function onSimClick() {
+            window.location.href = 'https://youtu.be/cNo-d6Y6w8Y?si=mJpFeqU2vwRyuWF0';
+        }
+    </script>
+</body>
+</html>
